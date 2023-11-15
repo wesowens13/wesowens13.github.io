@@ -1,4 +1,6 @@
 # wesowens13.github.io
-default
-create folder and input index.html for web links
-code for download
+<pre>
+  default
+  create folder and input index.html for web links
+  code in folder for working projects
+</pre>
