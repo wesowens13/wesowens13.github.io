@@ -1,6 +1,10 @@
 # wesowens13.github.io
-<pre>
+<p>
   default
+</p>
+<p>
   create folder and input index.html for web links
+</p>
+<p>
   code in folder for working projects
-</pre>
+</p>
