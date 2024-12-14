@@ -53,6 +53,6 @@ abline(h=UCL_mr,col='red')
 abline(h=LCL_mr,col='red')
 abline(h=LWL_mr,col='orange')
 abline(h=UWL_mr,col='orange')
-# qcc tool
+# qcc tool for individuals
 library(qcc)
 qcc(df_sample$`Average Wage`,type="xbar.one")
