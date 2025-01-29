@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Tree House #13 Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #4a90e2;
+        }
+        form {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        ol {
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function checkAnswers(event) {
+            event.preventDefault();
+            const answers = {
+                q1: 'c', q2: 'b', q3: 'c', q4: 'd', q5: 'b',
+                q6: 'a', q7: 'c', q8: 'c', q9: 'a', q10: 'd'
+            };
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                let selected = document.querySelector(`input[name=q${i}]:checked`);
+                if (selected) {
+                    output += `Question ${i}: ${selected.value === answers[`q${i}`] ? 'Correct' : 'Incorrect'}\n`;
+                } else {
+                    output += `Question ${i}: No answer selected\n`;
+                }
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+    <h2>Magic Tree House #13: Vacation Under the Volcano Quiz</h2>
+    <form id="quizForm" onsubmit="checkAnswers(event)">
+        <ol>
+            <li>
+                Where do Jack and Annie travel to in <i>Vacation Under the Volcano</i>?<br>
+                <input type="radio" name="q1" value="a"> a) Ancient Rome<br>
+                <input type="radio" name="q1" value="b"> b) Ancient Greece<br>
+                <input type="radio" name="q1" value="c"> c) Ancient Pompeii<br>
+                <input type="radio" name="q1" value="d"> d) Ancient Egypt<br>
+            </li>
+            <li>
+                What major historical event is about to happen during Jack and Annie’s visit?<br>
+                <input type="radio" name="q2" value="a"> a) The fall of the Roman Empire<br>
+                <input type="radio" name="q2" value="b"> b) The eruption of Mount Vesuvius<br>
+                <input type="radio" name="q2" value="c"> c) The building of the Colosseum<br>
+                <input type="radio" name="q2" value="d"> d) A great flood<br>
+            </li>
+            <li>
+                What magical mission do Jack and Annie need to complete in Pompeii?<br>
+                <input type="radio" name="q3" value="a"> a) Find a lost treasure<br>
+                <input type="radio" name="q3" value="b"> b) Rescue a missing villager<br>
+                <input type="radio" name="q3" value="c"> c) Retrieve a lost book for Morgan le Fay<br>
+                <input type="radio" name="q3" value="d"> d) Stop Mount Vesuvius from erupting<br>
+            </li>
+            <li>
+                What clues do Jack and Annie notice that warn them about the upcoming disaster?<br>
+                <input type="radio" name="q4" value="a"> a) Strange rumbling sounds<br>
+                <input type="radio" name="q4" value="b"> b) Ash falling from the sky<br>
+                <input type="radio" name="q4" value="c"> c) People feeling sick<br>
+                <input type="radio" name="q4" value="d"> d) All of the above<br>
+            </li>
+            <li>
+                What is the name of the librarian Jack and Annie are helping?<br>
+                <input type="radio" name="q5" value="a"> a) Merlin<br>
+                <input type="radio" name="q5" value="b"> b) Morgan le Fay<br>
+                <input type="radio" name="q5" value="c"> c) Aristotle<br>
+                <input type="radio" name="q5" value="d"> d) Merlin’s apprentice<br>
+            </li>
+            <li>
+                How do the people of Pompeii react when Jack and Annie warn them about the volcano?<br>
+                <input type="radio" name="q6" value="a"> a) They laugh and ignore them<br>
+                <input type="radio" name="q6" value="b"> b) They panic and run away<br>
+                <input type="radio" name="q6" value="c"> c) They believe them and leave immediately<br>
+                <input type="radio" name="q6" value="d"> d) They call for the Roman army<br>
+            </li>
+            <li>
+                What do Jack and Annie find in a shop in Pompeii?<br>
+                <input type="radio" name="q7" value="a"> a) A golden mask<br>
+                <input type="radio" name="q7" value="b"> b) A book about Pompeii<br>
+                <input type="radio" name="q7" value="c"> c) A Roman scroll<br>
+                <input type="radio" name="q7" value="d"> d) A magical key<br>
+            </li>
+            <li>
+                How do Jack and Annie escape Pompeii before the eruption?<br>
+                <input type="radio" name="q8" value="a"> a) They hide underground<br>
+                <input type="radio" name="q8" value="b"> b) They take a boat to safety<br>
+                <input type="radio" name="q8" value="c"> c) They use the magic tree house<br>
+                <input type="radio" name="q8" value="d"> d) They climb the volcano<br>
+            </li>
+            <li>
+                What happens to the city of Pompeii after Jack and Annie leave?<br>
+                <input type="radio" name="q9" value="a"> a) It is completely covered in ash<br>
+                <input type="radio" name="q9" value="b"> b) It is flooded by a tsunami<br>
+                <input type="radio" name="q9" value="c"> c) It is invaded by barbarians<br>
+                <input type="radio" name="q9" value="d"> d) It disappears into the ocean<br>
+            </li>
+            <li>
+                What do Jack and Annie learn from their adventure?<br>
+                <input type="radio" name="q10" value="a"> a) History can be exciting but also dangerous<br>
+                <input type="radio" name="q10" value="b"> b) Always listen to warnings about nature<br>
+                <input type="radio" name="q10" value="c"> c) Ancient civilizations had advanced knowledge<br>
+                <input type="radio" name="q10" value="d"> d) All of the above<br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
