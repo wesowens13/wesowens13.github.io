@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catching Fire Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        ol {
+            text-align: left;
+            padding-left: 20px;
+        }
+        li {
+            margin: 15px 0;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function checkAnswers(event) { 
+            event.preventDefault(); 
+            const answers = { 
+                q1: 'b', q2: 'c', q3: 'a', q4: 'd', q5: 'b', 
+                q6: 'c', q7: 'a', q8: 'd', q9: 'b', q10: 'a' 
+            }; 
+            let output = ""; 
+            for (let i = 1; i <= 10; i++) { 
+                let selected = document.querySelector(`input[name=q${i}]:checked`); 
+                if (selected) { 
+                    output += `Question ${i}: ${selected.value === answers[`q${i}`] ? 'Correct' : 'Incorrect'}
+`; 
+                } else { 
+                    output += `Question ${i}: No answer selected
+`; 
+                } 
+            } 
+            alert(output); 
+        }
+    </script>
+</head>
+<body>
+    <h2>Catching Fire Quiz</h2>
+    <form id="quizForm" onsubmit="checkAnswers(event)">
+        <ol>
+            <li>
+                <label>1. Who is the main protagonist of Catching Fire?</label>
+                <input type="radio" name="q1" value="a"> Peeta Mellark<br>
+                <input type="radio" name="q1" value="b"> Katniss Everdeen<br>
+                <input type="radio" name="q1" value="c"> Gale Hawthorne<br>
+                <input type="radio" name="q1" value="d"> President Snow<br>
+            </li>
+            <li>
+                <label>2. What is the name of the event that Katniss and Peeta must participate in?</label>
+                <input type="radio" name="q2" value="a"> The Reaping<br>
+                <input type="radio" name="q2" value="b"> The Games<br>
+                <input type="radio" name="q2" value="c"> The Quarter Quell<br>
+                <input type="radio" name="q2" value="d"> The Victory Tour<br>
+            </li>
+            <li>
+                <label>3. What is the main theme of Catching Fire?</label>
+                <input type="radio" name="q3" value="a"> Revolution<br>
+                <input type="radio" name="q3" value="b"> Love<br>
+                <input type="radio" name="q3" value="c"> Sacrifice<br>
+                <input type="radio" name="q3" value="d"> Survival<br>
+            </li>
+            <li>
+                <label>4. Who is the new head of the Capitol’s peacekeepers in Catching Fire?</label>
+                <input type="radio" name="q4" value="a"> Seneca Crane<br>
+                <input type="radio" name="q4" value="b"> Plutarch Heavensbee<br>
+                <input type="radio" name="q4" value="c"> Gale Hawthorne<br>
+                <input type="radio" name="q4" value="d"> Romulus Thread<br>
+            </li>
+            <li>
+                <label>5. What does Katniss do to show her defiance to the Capitol?</label>
+                <input type="radio" name="q5" value="a"> Refuses to fight<br>
+                <input type="radio" name="q5" value="b"> Threatens to kill herself<br>
+                <input type="radio" name="q5" value="c"> Kills President Snow<br>
+                <input type="radio" name="q5" value="d"> Trains the other tributes<br>
+            </li>
+            <li>
+                <label>6. Who does Katniss have a romantic relationship with?</label>
+                <input type="radio" name="q6" value="a"> Gale Hawthorne<br>
+                <input type="radio" name="q6" value="b"> Finnick Odair<br>
+                <input type="radio" name="q6" value="c"> Peeta Mellark<br>
+                <input type="radio" name="q6" value="d"> Cato<br>
+            </li>
+            <li>
+                <label>7. Who is the victor of the 75th Hunger Games?</label>
+                <input type="radio" name="q7" value="a"> Katniss Everdeen<br>
+                <input type="radio" name="q7" value="b"> Peeta Mellark<br>
+                <input type="radio" name="q7" value="c"> Finnick Odair<br>
+                <input type="radio" name="q7" value="d"> Johanna Mason<br>
+            </li>
+            <li>
+                <label>8. What is the significance of the Mockingjay symbol?</label>
+                <input type="radio" name="q8" value="a"> It represents the Capitol<br>
+                <input type="radio" name="q8" value="b"> It is the symbol of the rebellion<br>
+                <input type="radio" name="q8" value="c"> It is a sign of peace<br>
+                <input type="radio" name="q8" value="d"> It is the symbol of the Districts<br>
+            </li>
+            <li>
+                <label>9. How does Katniss feel about her role as the "Girl on Fire"?</label>
+                <input type="radio" name="q9" value="a"> She embraces it<br>
+                <input type="radio" name="q9" value="b"> She resents it<br>
+                <input type="radio" name="q9" value="c"> She is indifferent<br>
+                <input type="radio" name="q9" value="d"> She is confused by it<br>
+            </li>
+            <li>
+                <label>10. Who does Katniss consider to be her biggest enemy in the story?</label>
+                <input type="radio" name="q10" value="a"> President Snow<br>
+                <input type="radio" name="q10" value="b"> Gale Hawthorne<br>
+                <input type="radio" name="q10" value="c"> Peeta Mellark<br>
+                <input type="radio" name="q10" value="d"> Cato<br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
