@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Tree House #20 Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5ab;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #8b4513;
+        }
+        form {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        ol {
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #8b4513;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #654321;
+        }
+    </style>
+    <script>
+        function checkAnswers(event) {
+            event.preventDefault();
+            const answers = {
+                q1: 'a', q2: 'c', q3: 'b', q4: 'd', q5: 'a',
+                q6: 'b', q7: 'c', q8: 'a', q9: 'd', q10: 'b'
+            };
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                let selected = document.querySelector(`input[name=q${i}]:checked`);
+                if (selected) {
+                    output += `Question ${i}: ${selected.value === answers[`q${i}`] ? 'Correct' : 'Incorrect'}\n`;
+                } else {
+                    output += `Question ${i}: No answer selected\n`;
+                }
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+    <h2>Magic Tree House #20 Quiz</h2>
+    <form id="quizForm" onsubmit="checkAnswers(event)">
+        <ol>
+            <li>
+                What is the title of Magic Tree House #20?<br>
+                <input type="radio" name="q1" value="a"> a) Dingoes at Dinnertime<br>
+                <input type="radio" name="q1" value="b"> b) Lions at Lunchtime<br>
+                <input type="radio" name="q1" value="c"> c) Polar Bears Past Bedtime<br>
+                <input type="radio" name="q1" value="d"> d) Tigers at Twilight<br>
+            </li>
+            <li>
+                Where do Jack and Annie travel in this book?<br>
+                <input type="radio" name="q2" value="a"> a) The Arctic<br>
+                <input type="radio" name="q2" value="b"> b) The Amazon Rainforest<br>
+                <input type="radio" name="q2" value="c"> c) Australia<br>
+                <input type="radio" name="q2" value="d"> d) The Sahara Desert<br>
+            </li>
+            <li>
+                What animal plays a big role in this adventure?<br>
+                <input type="radio" name="q3" value="a"> a) Kangaroo<br>
+                <input type="radio" name="q3" value="b"> b) Dingo<br>
+                <input type="radio" name="q3" value="c"> c) Koala<br>
+                <input type="radio" name="q3" value="d"> d) Emu<br>
+            </li>
+            <li>
+                What challenge do Jack and Annie face in this book?<br>
+                <input type="radio" name="q4" value="a"> a) A sandstorm<br>
+                <input type="radio" name="q4" value="b"> b) An earthquake<br>
+                <input type="radio" name="q4" value="c"> c) A river crossing<br>
+                <input type="radio" name="q4" value="d"> d) A wildfire<br>
+            </li>
+            <li>
+                What is the main lesson Jack and Annie learn?<br>
+                <input type="radio" name="q5" value="a"> a) The importance of helping others<br>
+                <input type="radio" name="q5" value="b"> b) How to survive in the wild<br>
+                <input type="radio" name="q5" value="c"> c) The value of friendship<br>
+                <input type="radio" name="q5" value="d"> d) How to find water<br>
+            </li>
+            <li>
+                What do Jack and Annie use to navigate their adventure?<br>
+                <input type="radio" name="q6" value="a"> a) A compass<br>
+                <input type="radio" name="q6" value="b"> b) A map<br>
+                <input type="radio" name="q6" value="c"> c) A telescope<br>
+                <input type="radio" name="q6" value="d"> d) A guidebook<br>
+            </li>
+            <li>
+                What magical object helps Jack and Annie?<br>
+                <input type="radio" name="q7" value="a"> a) A golden flute<br>
+                <input type="radio" name="q7" value="b"> b) A crystal ball<br>
+                <input type="radio" name="q7" value="c"> c) A magic book<br>
+                <input type="radio" name="q7" value="d"> d) A time-travel stone<br>
+            </li>
+            <li>
+                What animal helps guide Jack and Annie?<br>
+                <input type="radio" name="q8" value="a"> a) A kookaburra<br>
+                <input type="radio" name="q8" value="b"> b) A wombat<br>
+                <input type="radio" name="q8" value="c"> c) A kangaroo<br>
+                <input type="radio" name="q8" value="d"> d) A dingo<br>
+            </li>
+            <li>
+                How do Jack and Annie return home?<br>
+                <input type="radio" name="q9" value="a"> a) By boat<br>
+                <input type="radio" name="q9" value="b"> b) By a magic rope<br>
+                <input type="radio" name="q9" value="c"> c) By a friendly dingo<br>
+                <input type="radio" name="q9" value="d"> d) By the magic tree house<br>
+            </li>
+            <li>
+                Who sends Jack and Annie on this adventure?<br>
+                <input type="radio" name="q10" value="a"> a) Merlin<br>
+                <input type="radio" name="q10" value="b"> b) Morgan le Fay<br>
+                <input type="radio" name="q10" value="c"> c) A wise owl<br>
+                <input type="radio" name="q10" value="d"> d) A talking parrot<br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

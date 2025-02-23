@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Tree House #21 Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #3f51b5;
+        }
+        form {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        ol {
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #3f51b5;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #303f9f;
+        }
+    </style>
+    <script>
+        function checkAnswers(event) {
+            event.preventDefault();
+            const answers = {
+                q1: 'c', q2: 'b', q3: 'a', q4: 'd', q5: 'c',
+                q6: 'b', q7: 'a', q8: 'c', q9: 'd', q10: 'b'
+            };
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                let selected = document.querySelector(`input[name=q${i}]:checked`);
+                if (selected) {
+                    output += `Question ${i}: ${selected.value === answers[`q${i}`] ? 'Correct' : 'Incorrect'}\n`;
+                } else {
+                    output += `Question ${i}: No answer selected\n`;
+                }
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Magic Tree House #21: Civil War on Sunday</h2>
+    <form onsubmit="checkAnswers(event)">
+        <ol>
+            <li>Where do Jack and Annie travel in this book?<br>
+                <input type="radio" name="q1" value="a"> a) The Wild West<br>
+                <input type="radio" name="q1" value="b"> b) Ancient Egypt<br>
+                <input type="radio" name="q1" value="c"> c) The American Civil War<br>
+                <input type="radio" name="q1" value="d"> d) The Revolutionary War<br>
+            </li>
+            <li>Who do they meet during their journey?<br>
+                <input type="radio" name="q2" value="a"> a) A young nurse<br>
+                <input type="radio" name="q2" value="b"> b) Clara Barton<br>
+                <input type="radio" name="q2" value="c"> c) A wounded soldier<br>
+                <input type="radio" name="q2" value="d"> d) A general<br>
+            </li>
+            <li>What mission do Jack and Annie have in this story?<br>
+                <input type="radio" name="q3" value="a"> a) Helping injured soldiers<br>
+                <input type="radio" name="q3" value="b"> b) Delivering a letter<br>
+                <input type="radio" name="q3" value="c"> c) Finding a treasure<br>
+                <input type="radio" name="q3" value="d"> d) Finding lost children<br>
+            </li>
+            <li>What lesson do they learn?<br>
+                <input type="radio" name="q4" value="a"> a) The importance of patience<br>
+                <input type="radio" name="q4" value="b"> b) Courage<br>
+                <input type="radio" name="q4" value="c"> c) Being a good listener<br>
+                <input type="radio" name="q4" value="d"> d) Kindness and compassion<br>
+            </li>
+            <li>What is the main challenge they face?<br>
+                <input type="radio" name="q5" value="a"> a) Solving a mystery<br>
+                <input type="radio" name="q5" value="b"> b) Escaping danger<br>
+                <input type="radio" name="q5" value="c"> c) Helping wounded people<br>
+                <input type="radio" name="q5" value="d"> d) Finding food<br>
+            </li>
+            <li>Who inspires Jack and Annie during their journey?<br>
+                <input type="radio" name="q6" value="a"> a) A soldier<br>
+                <input type="radio" name="q6" value="b"> b) A kind nurse<br>
+                <input type="radio" name="q6" value="c"> c) A doctor<br>
+                <input type="radio" name="q6" value="d"> d) A young child<br>
+            </li>
+            <li>What special item do Jack and Annie use?<br>
+                <input type="radio" name="q7" value="a"> a) A magical book<br>
+                <input type="radio" name="q7" value="b"> b) A golden key<br>
+                <input type="radio" name="q7" value="c"> c) A glowing amulet<br>
+                <input type="radio" name="q7" value="d"> d) A magic compass<br>
+            </li>
+            <li>What helps Jack and Annie complete their mission?<br>
+                <input type="radio" name="q8" value="a"> a) Courage<br>
+                <input type="radio" name="q8" value="b"> b) Speed<br>
+                <input type="radio" name="q8" value="c"> c) Kindness<br>
+                <input type="radio" name="q8" value="d"> d) A secret path<br>
+            </li>
+            <li>How do Jack and Annie return home?<br>
+                <input type="radio" name="q9" value="a"> a) By a train<br>
+                <input type="radio" name="q9" value="b"> b) By a boat<br>
+                <input type="radio" name="q9" value="c"> c) By a horse-drawn carriage<br>
+                <input type="radio" name="q9" value="d"> d) By the magic tree house<br>
+            </li>
+            <li>Who sends Jack and Annie on this mission?<br>
+                <input type="radio" name="q10" value="a"> a) Merlin<br>
+                <input type="radio" name="q10" value="b"> b) Morgan le Fay<br>
+                <input type="radio" name="q10" value="c"> c) A secret society<br>
+                <input type="radio" name="q10" value="d"> d) A mysterious stranger<br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+

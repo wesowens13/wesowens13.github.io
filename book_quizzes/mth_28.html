@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Tree House #28 Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5deb3;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #8b4513;
+        }
+        form {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        ol {
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #8b4513;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a3410;
+        }
+    </style>
+    <script>
+        function checkAnswers(event) {
+            event.preventDefault();
+            const answers = {
+                q1: 'c', q2: 'b', q3: 'a', q4: 'd', q5: 'b',
+                q6: 'c', q7: 'a', q8: 'd', q9: 'b', q10: 'c'
+            };
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                let selected = document.querySelector(`input[name=q${i}]:checked`);
+                if (selected) {
+                    output += `Question ${i}: ${selected.value === answers[`q${i}`] ? 'Correct' : 'Incorrect'}\n`;
+                } else {
+                    output += `Question ${i}: No answer selected\n`;
+                }
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+    <h2>Magic Tree House #28 Quiz</h2>
+    <form id="quizForm" onsubmit="checkAnswers(event)">
+        <ol>
+            <li>
+                Where do Jack and Annie travel in this book?<br>
+                <input type="radio" name="q1" value="a"> a) Ancient Egypt<br>
+                <input type="radio" name="q1" value="b"> b) The Wild West<br>
+                <input type="radio" name="q1" value="c"> c) The Great Wall of China<br>
+                <input type="radio" name="q1" value="d"> d) The Amazon Rainforest<br>
+            </li>
+            <li>
+                Who do Jack and Annie meet during this adventure?<br>
+                <input type="radio" name="q2" value="a"> a) A brave soldier<br>
+                <input type="radio" name="q2" value="b"> b) A wise monk<br>
+                <input type="radio" name="q2" value="c"> c) A local sheriff<br>
+                <input type="radio" name="q2" value="d"> d) A famous author<br>
+            </li>
+            <li>
+                What challenge do Jack and Annie face in this story?<br>
+                <input type="radio" name="q3" value="a"> a) Escaping a dangerous situation<br>
+                <input type="radio" name="q3" value="b"> b) Finding a hidden treasure<br>
+                <input type="radio" name="q3" value="c"> c) Solving a riddle<br>
+                <input type="radio" name="q3" value="d"> d) Navigating a maze<br>
+            </li>
+            <li>
+                What is their main mission in this book?<br>
+                <input type="radio" name="q4" value="a"> a) To deliver an important message<br>
+                <input type="radio" name="q4" value="b"> b) To make new friends<br>
+                <input type="radio" name="q4" value="c"> c) To help someone in need<br>
+                <input type="radio" name="q4" value="d"> d) To find a magical object<br>
+            </li>
+            <li>
+                What lesson do Jack and Annie learn in this story?<br>
+                <input type="radio" name="q5" value="a"> a) The value of honesty<br>
+                <input type="radio" name="q5" value="b"> b) The importance of courage<br>
+                <input type="radio" name="q5" value="c"> c) The power of teamwork<br>
+                <input type="radio" name="q5" value="d"> d) The joy of helping others<br>
+            </li>
+            <li>
+                What item plays a crucial role in their quest?<br>
+                <input type="radio" name="q6" value="a"> a) A golden medallion<br>
+                <input type="radio" name="q6" value="b"> b) A silver coin<br>
+                <input type="radio" name="q6" value="c"> c) A magic scroll<br>
+                <input type="radio" name="q6" value="d"> d) A glowing lantern<br>
+            </li>
+            <li>
+                Who helps them complete their mission?<br>
+                <input type="radio" name="q7" value="a"> a) A kind stranger<br>
+                <input type="radio" name="q7" value="b"> b) A talking animal<br>
+                <input type="radio" name="q7" value="c"> c) A wise elder<br>
+                <input type="radio" name="q7" value="d"> d) A young child<br>
+            </li>
+            <li>
+                What obstacle must they overcome?<br>
+                <input type="radio" name="q8" value="a"> a) A locked door<br>
+                <input type="radio" name="q8" value="b"> b) A deep river<br>
+                <input type="radio" name="q8" value="c"> c) A fierce storm<br>
+                <input type="radio" name="q8" value="d"> d) A dangerous bridge<br>
+            </li>
+            <li>
+                What helps Jack and Annie succeed in this adventure?<br>
+                <input type="radio" name="q9" value="a"> a) Luck<br>
+                <input type="radio" name="q9" value="b"> b) Bravery<br>
+                <input type="radio" name="q9" value="c"> c) Kindness<br>
+                <input type="radio" name="q9" value="d"> d) Intelligence<br>
+            </li>
+            <li>
+                What special skill do Jack and Annie use in this book?<br>
+                <input type="radio" name="q10" value="a"> a) Archery<br>
+                <input type="radio" name="q10" value="b"> b) Storytelling<br>
+                <input type="radio" name="q10" value="c"> c) Problem-solving<br>
+                <input type="radio" name="q10" value="d"> d) Singing<br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
