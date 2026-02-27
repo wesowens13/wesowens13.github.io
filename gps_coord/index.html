@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barefoot University – GPS Coordinates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 140px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .coordinates {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .map-button {
+            display: inline-block;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+            background-color: #ffffff;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .map-button:hover {
+            background-color: #cccccc;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .coordinates {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="BU-logo-circle-white.png" alt="Barefoot University Logo" class="logo">
+
+        <h1>Next Meeting Location</h1>
+
+        <div class="coordinates">
+            34.55098, -77.44904
+        </div>
+
+        <a class="map-button" 
+           href="https://www.google.com/maps?q=34.55098,-77.44904" 
+           target="_blank">
+           Open in Google Maps
+        </a>
+
+        <div class="footer">
+            Barefoot University
+        </div>
+    </div>
+
+</body>
+</html>
